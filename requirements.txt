@@ -1,0 +1,28 @@
+# Lecture PDF native + extraction tableaux geometriques
+pdfplumber>=0.10
+
+# Fallback lecture PDF natif (texte brut si pdfplumber absent)
+pypdf>=4.0
+
+# Generation classeurs Excel .xlsx
+openpyxl>=3.1
+
+# Conversion pages PDF en images pour OCR
+pdf2image>=1.16
+
+# Manipulation image (pdf2image)
+pillow>=10.0
+
+# Interface Python vers Tesseract OCR
+pytesseract>=0.3
+
+# Detection de grille de tableau (lignes reelles) sur les PDF scannes -
+# ameliore fortement la qualite d'extraction OCR des tableaux a bordures.
+# Optionnel : sans ce paquet, le pipeline fonctionne toujours mais se rabat
+# sur une methode moins fiable (position des mots).
+opencv-python-headless>=4.8
+numpy>=1.24
+
+# Structuration systematique des pages via l'API Claude (--use-claude).
+# Necessite une cle API Anthropic (variable d'environnement ANTHROPIC_API_KEY).
+anthropic>=0.40

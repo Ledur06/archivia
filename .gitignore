@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environnement / editeur
+.vscode/
+.env
+*.env
+
+# Sorties generees par le pipeline (documents traites par des utilisateurs -
+# a ne jamais versionner, potentiellement sensibles)
+outputs/
+
+# Documents traites en local (volumineux et/ou sensibles).
+# Regle generique : AUCUN PDF n'est versionne, sauf les fixtures de test
+# synthetiques explicitement autorisees ci-dessous. Ne jamais assouplir
+# cette regle sans verifier l'origine du document.
+*.pdf
+!tests/sample.pdf
+!tests/fixtures/*.pdf
+
+# Sorties intermediaires
+*.xlsx
+*.xls
+!tests/fixtures/*.xlsx
+
+node_modules/
+
+# Divers
+*.log
+.DS_Store

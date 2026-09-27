@@ -1,0 +1,20 @@
+[project]
+name = "pdf-excel-converter"
+version = "1.0.0"
+description = "Convert native or scanned PDF files into structured Excel workbooks."
+requires-python = ">=3.10"
+dependencies = [
+    "pdfplumber>=0.10",
+    "pypdf>=4.0",
+    "openpyxl>=3.1",
+    "pdf2image>=1.16",
+    "pillow>=10.0",
+    "pytesseract>=0.3",
+]
+
+[project.scripts]
+pdf-excel-converter = "pdf_excel_converter.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
